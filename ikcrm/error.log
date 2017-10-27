@@ -1,0 +1,20 @@
+error time:2017-08-01 14:09:15.584000
+Traceback (most recent call last):
+  File "C:/Users/Mohammad He/Desktop/ikcrm/ikcrm_dev.py", line 286, in <module>
+    run()
+  File "C:/Users/Mohammad He/Desktop/ikcrm/ikcrm_dev.py", line 266, in run
+    login()
+  File "C:/Users/Mohammad He/Desktop/ikcrm/ikcrm_dev.py", line 25, in login
+    json_data = requests.post(url=url, json=login_data, headers=headers).content
+  File "D:\HXProgram\Python27\lib\site-packages\requests\api.py", line 110, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "D:\HXProgram\Python27\lib\site-packages\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\HXProgram\Python27\lib\site-packages\requests\sessions.py", line 488, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\HXProgram\Python27\lib\site-packages\requests\sessions.py", line 609, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\HXProgram\Python27\lib\site-packages\requests\adapters.py", line 487, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPSConnectionPool(host='api.ikcrm.com', port=443): Max retries exceeded with url: /api/v2/auth/login (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x000000000403B748>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+-------------------------------------------------------------
